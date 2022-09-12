@@ -3,7 +3,6 @@
 // a = 2 b = 10 -> max = 10
 // a = -9 b = -3 -> max = -3
 
-// !!!  Я немного усложнила задачу и сразу сравниваю два числа, введенных пользователем !!!
 
 Console.WriteLine("Введите число а");
 int a = Convert.ToInt32(Console.ReadLine());
@@ -11,18 +10,17 @@ int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число b");
 int b = Convert.ToInt32(Console.ReadLine());
 
-int max = b;
-if (a > max)
+int max = a;
+int min;
+
+if (b > max)
 {
-    Console.Write("max = ");
-    Console.WriteLine(a);
-    Console.Write("min = ");
-    Console.WriteLine(b);
+    max = b;
+    min = a;
 }
 else
 {
-    Console.Write("max = ");
-    Console.WriteLine(b);
-    Console.Write("min = ");
-    Console.WriteLine(a);
+    min = b;
 }
+Console.WriteLine("min = " + min);
+Console.WriteLine("max = " + max);
